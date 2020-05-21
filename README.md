@@ -2,7 +2,7 @@
 ## Installation
 Clone the latex2code app repository from github.
 ```
-git clone http://
+git clone https://github.com/miladDakka/latex2python.git
 ```
 ## Setup
 Begin by changing into the top directory of the application folder using the command line. This assumes you've saved the directory in the home (~) folder (change accordingly).
