@@ -12,7 +12,8 @@ def tasks():
     if "latex_formulas" not in session:
         session["latex_formulas"] = []
         session["python_formulas"] = []
-    return render_template("formulas.html", latex_formulas=session["latex_formulas"], python_formulas=session["python_formulas"])
+    return render_template("formulas.html", latex_formulas=session["latex_formulas"], 
+            python_formulas=session["python_formulas"])
 
 @app.route("/add", methods=["GET", "POST"])
 def add():
