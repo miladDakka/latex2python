@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>LaTeX to Python Translations</h1>
+    <ul style="display: inline-block; zoom: 1; *display: inline; _height: 30px;">
+        <li style="list-style-type: none; font-weight: bold;">
+            LaTeX
+            <li style="list-style-type: none; font-weight: bold;">&nbsp;</li>
+            {% for latex_formula in latex_formulas %}
+                <li>{{ latex_formula }}</li>
+            {% endfor %}
+        </li>
+    </ul>
+    <ul style="display: inline-block; zoom: 1; *display: inline; _height: 30px;">
+        <li style="list-style-type: none; font-weight: bold;">
+            Python
+            <li style="list-style-type: none; font-weight: bold;">&nbsp;</li>
+            {% for python_formula in python_formulas %}
+                <li>{{ python_formula }}</li>
+            {% endfor %}
+        </li>
+    </ul>
+    <p></p>
+    
+    <a href="/add">Create a New Translation</a>
+{% endblock %}

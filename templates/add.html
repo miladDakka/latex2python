@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <form action="/add" method="post">
+        <input id="latex_formula" name="latex_formula" type="text" placeholder="LaTeX Formula">
+        <input id="submit" type="submit" disabled>
+    </form>
+    <script>
+        document.querySelector('#latex_formula').onkeyup = function() {
+            if (document.querySelector('#latex_formula').value === '') {
+                document.querySelector('#submit').disabled = true;
+            } else {
+                document.querySelector('#submit').disabled = false;
+            }
+        }
+    </script>
+{% endblock %}
